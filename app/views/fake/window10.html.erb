@@ -1,0 +1,134 @@
+<script>
+  $(function()
+  {
+    $(document).keyup(function(e)
+    {
+      switch(e.keyCode)
+      {
+        case 32 : open('errorw10','_self'); break;
+      }
+    });
+  });
+</script>
+
+<script>
+var count=0;
+var counter=setInterval(timer, 1200);
+function timer()
+{
+  count=count+1;
+  if (count <= 0)
+  {
+    clearInterval(counter);
+    return;
+  }
+  document.getElementById("timer").innerHTML=count +'%';document.getElementById("timer2").innerHTML=count +'%';
+}
+</script>
+
+<style>
+body
+{
+  margin:0;padding:0;background:black;font-family:Segoe UI; color:white;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	cursor: url(http://fakeupdate.net/assets/img/gQyFbtU.png), auto;user-select:none;-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;
+}
+h1
+{
+  font-size:48px;
+  font-weight:normal;
+  font-family: Segoe UI Light, Segoe UI;
+}
+
+.center
+{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+
+#bottom
+{
+  position:fixed;
+  bottom:3%;
+  width:100%;
+}
+
+#black
+{
+  display:none;
+}
+
+.position
+{
+  margin-left:140px;
+  margin-top:100px;
+}
+
+.progress-bar
+{
+  position: fixed;
+  height: 200px;
+  width: 200px;
+}
+
+.progress-bar div
+{
+  position: fixed;
+  height: 206px;
+  width: 206px;
+  border-radius: 50%;
+}
+
+.progress-bar div span
+{
+  position: absolute;
+  font-family: Segoe UI Light, Segoe UI, Arial;
+  font-size: 60px;
+  line-height: 185px;
+  height: 200px;
+  width: 200px;
+  left: 3px;
+  top: 3px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.progress-bar .background
+{
+  background-color: #afafaf;
+}
+</style>
+
+<body>
+  <div style="width:100%;height:100%;background:black;position:fixed;">
+    <center>
+      <div class="center">
+        <h1 data-translate="_win10updates1">Windows 업그레이드 중</h1>
+        <p style="color:#afafaf;" data-translate="_win10updates2">PC가 여러번 다시 시작됩니다. 잠시만 기다려 주세요.</p>
+        <div style="clear:both;" class="progress-bar position">
+          <div class="background">
+          </div>
+          <div class="">
+            <span>
+              <a id="timer">0%</a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <p id="bottom">
+        <span style="color:#afafaf" data-translate="_win10updates3">파일 복사중</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <span style="color:#177dcf" data-translate="_win10updates4">기능 및 드라이버 설치중</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <span style="color:#afafaf" data-translate="_win10updates5">설정 구성중</span>
+      </p>
+    </center>
+  </div>
+</body>
