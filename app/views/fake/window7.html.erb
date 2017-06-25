@@ -1,4 +1,4 @@
-<script>
+<script>      <!-- 스페이스바 입력 시 errorw7 뷰로 넘어감 -->
   $(function()
   {
     $(document).keyup(function(e)
@@ -11,13 +11,10 @@
   });
 </script>
 
-<script>
+<script> <!-- 숫자 카운팅 -->
   var count=0;
-  var stage=1;
-  var stage2=3;
-  var counter=setInterval(timer, 10000); //1000 will  run it every 1 second
+  var counter=setInterval(timer, 12000); //1000 will  run it every 1 second
   var ref="Configuring updates";
-
   function timer()
   {
     count=count+1;
@@ -39,13 +36,13 @@ body
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-  vertical-align:middle;
-  text-align:center;
+  vertical-align: middle;
+  text-align: center;
   z-index: -1;
-  overflow:hidden;
-  margin:0;
-  padding:0;
-  cursor: url(http://fakeupdate.net/assets/img/gQyFbtU.png), auto;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  cursor: none;
 }
 
 .Centerin
